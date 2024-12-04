@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const fetchCartData = async () => {
   try {
-    const response = await fetch('13.201.191.84/api/cart', {
+    const response = await fetch('13.233.137.103/api/cart', {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -28,7 +28,7 @@ const fetchCartData = async () => {
 
 const handleRemoveFromCart = async (carId, setCartItems) => {
   try {
-    const response = await fetch(`13.201.191.84/api/cart/remove/${carId}`, {
+    const response = await fetch(`13.233.137.103/api/cart/remove/${carId}`, {
       method: 'DELETE',
       credentials: 'include',
       headers: {
