@@ -53,7 +53,7 @@ function TestDrive() {
 
   const fetchCarDetails = async () => {
     try {
-      const response = await fetch(`http://65.1.3.189:3000/api/cars/cars/${params?.id}`, {
+      const response = await fetch(`http://65.2.127.109:3000/api/cars/cars/${params?.id}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
@@ -84,7 +84,7 @@ function TestDrive() {
   const fetchCarFeatures = async () => {
     setLoadingFeatures(true);
     try {
-      const response = await fetch(`http://65.1.3.189:3000/api/cars/cars/${params?.id}`, {
+      const response = await fetch(`http://65.2.127.109:3000/api/cars/cars/${params?.id}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
@@ -133,7 +133,7 @@ function TestDrive() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch('http://65.1.3.189:3000/api/testDrive/create', {
+      const response = await fetch('http://65.2.127.109:3000/api/testDrive/create', {
         method: 'POST',
         headers : {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
