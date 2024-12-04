@@ -14,7 +14,7 @@ export default function TestDriveStatus() {
   const fetchCarsData = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch('http://65.0.61.22:3000/api/testdrive/get',{
+      const response = await fetch('http://65.1.3.189:3000/api/testdrive/get',{
         headers : {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           "content-type" : 'application/json'
