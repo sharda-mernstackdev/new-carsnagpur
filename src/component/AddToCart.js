@@ -11,7 +11,7 @@ const fetchCartData = async () => {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
         "content-type": 'application/json'
-      },
+      }
     });
 
     if (!response.ok) {
