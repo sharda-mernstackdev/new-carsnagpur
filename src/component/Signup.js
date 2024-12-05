@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export function Signup() {
+function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const togglePasswordVisibility = () => {
+  function togglePasswordVisibility() {
     setShowPassword(!showPassword);
-  };
+  }
 
-  const handleInputChange = (e) => {
+  function handleInputChange(e) {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
-  };
+  }
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
     setError('');
@@ -52,7 +52,7 @@ export function Signup() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }
 
   if (success) {
     return (
@@ -111,7 +111,7 @@ export function Signup() {
               <input
                 id="password"
                 name="password"
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? 'text' : 'password'}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Password"
@@ -131,9 +131,7 @@ export function Signup() {
               </button>
             </div>
           </div>
-          {error && (
-            <p className="text-red-500 text-sm">{error}</p>
-          )}
+          {error && <p className="text-red-500 text-sm">{error}</p>}
           <div>
             <button
               type="submit"
