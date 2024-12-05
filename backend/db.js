@@ -4,7 +4,7 @@ const mongoose= require ('mongoose')
 
 const connectDB=async ()=>{
     try {
-        await mongoose.connect('mongodb+srv://jcishardawaghmare:2nw5yxZcdjhB0RX1@carsnagpur.gcvtr.mongodb.net/carsnagpur')
+        await mongoose.connect('mongodb+srv://jcisanjanakashimkar:bpBZYWpuP05WOg32@cluster0.8s6ia.mongodb.net/newcarsnagpur')
         console.log('mongo connected');
         
     } catch (error) {
